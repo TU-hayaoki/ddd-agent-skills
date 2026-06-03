@@ -1,0 +1,18 @@
+# Tooling and assistant state
+.serena/
+
+# Node (this repository intentionally ships no package.json or dependencies)
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+# Build and type-check output
+dist/
+*.tsbuildinfo
+
+# OS and editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
