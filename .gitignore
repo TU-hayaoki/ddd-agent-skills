@@ -1,5 +1,7 @@
 # Tooling and assistant state
+.agents/
 .serena/
+skills-lock.json
 
 # Node (this repository intentionally ships no package.json or dependencies)
 node_modules/
