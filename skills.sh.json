@@ -1,0 +1,24 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "DDD Design",
+      "description": "Skills for strategic modeling, tactical modeling, process design, and architecture review.",
+      "skills": [
+        "ddd-strategic-design",
+        "ddd-tactical-modeling",
+        "ddd-process-and-read-models",
+        "ddd-architecture-review"
+      ]
+    },
+    {
+      "title": "Implementation",
+      "description": "Skills for TypeScript, NestJS, and Prisma implementation.",
+      "skills": [
+        "ddd-typescript-implementation",
+        "ddd-nestjs-prisma"
+      ]
+    }
+  ]
+}
