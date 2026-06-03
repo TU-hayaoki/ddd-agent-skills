@@ -85,6 +85,7 @@ Use project-specific typed results or exceptions consistently; this example uses
 Name repository methods after aggregate needs:
 
 - `findById(orderId)`
+- `add(order)` for new aggregates when creation and update semantics differ
 - `save(order)`
 - `nextIdentity()`
 
