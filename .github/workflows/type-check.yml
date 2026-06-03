@@ -1,0 +1,30 @@
+name: type-check
+
+on:
+  push:
+    paths:
+      - "skills/**/*.md"
+      - ".github/type-check/**"
+      - ".github/workflows/type-check.yml"
+  pull_request:
+    paths:
+      - "skills/**/*.md"
+      - ".github/type-check/**"
+      - ".github/workflows/type-check.yml"
+
+jobs:
+  type-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # The repository ships no package.json; install TypeScript ephemerally.
+      - name: Install TypeScript
+        run: npm install -g typescript@5.9.3
+
+      - name: Type-check reference snippets
+        run: tsc --noEmit -p .github/type-check/tsconfig.json
