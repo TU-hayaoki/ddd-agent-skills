@@ -62,6 +62,10 @@ export class FakeOrderRepository implements OrderRepository {
     return this.orders.get(id) ?? null;
   }
 
+  async add(order: Order): Promise<void> {
+    this.orders.set(order.id, order);
+  }
+
   async save(order: Order): Promise<void> {
     this.orders.set(order.id, order);
   }
@@ -74,4 +78,5 @@ export class FakeOrderRepository implements OrderRepository {
 - Prefer rejected-action tests over only happy paths.
 - Assert events after successful behavior and absence of events after rejection.
 - Use fakes for application tests; use adapter tests for Prisma mapping.
+- Mirror the repository contract in fakes, including separate `add` and `save` methods when creation and update are distinct.
 - Keep HTTP tests for transport wiring and serialization, not core rules.

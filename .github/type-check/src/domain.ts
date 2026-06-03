@@ -124,6 +124,7 @@ export class Order {
 
 export interface OrderRepository {
   findById(id: OrderId): Promise<Order | null>;
+  add(order: Order): Promise<void>;
   save(order: Order): Promise<void>;
 }
 

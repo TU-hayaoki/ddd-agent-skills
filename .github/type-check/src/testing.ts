@@ -48,6 +48,10 @@ export class FakeOrderRepository implements OrderRepository {
     return this.orders.get(id) ?? null;
   }
 
+  async add(order: Order): Promise<void> {
+    this.orders.set(order.id, order);
+  }
+
   async save(order: Order): Promise<void> {
     this.orders.set(order.id, order);
   }
